@@ -27,6 +27,7 @@ $(function () {
       dataType: 'json',
       success: function (data) {
         if (data.form_is_valid) {
+          //alert("Book created!");  // <-- This line was executed! Means success
           $("#book-table tbody").html(data.html_book_list);
           $("#modal-book").modal("hide");
         }
@@ -37,7 +38,6 @@ $(function () {
     });
     return false;
   };
-
 
   /* Binding */
 
@@ -54,3 +54,5 @@ $(function () {
   $("#modal-book").on("submit", ".js-book-delete-form", saveForm);
 
 });
+
+

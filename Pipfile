@@ -1,0 +1,16 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+django = "==1.10.3"
+django-widget-tweaks = "==1.4.1"
+requests = "*"
+
+
+[dev-packages]
+

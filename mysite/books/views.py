@@ -2,9 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 
-from .models import Book
+from .models import Book 
 from .forms import BookForm
-
+import json
+import operator
 
 def book_list(request):
     books = Book.objects.all()
@@ -43,6 +44,7 @@ def book_update(request, pk):
     else:
         form = BookForm(instance=book)
     return save_book_form(request, form, 'books/includes/partial_book_update.html')
+
 
 
 def book_delete(request, pk):
